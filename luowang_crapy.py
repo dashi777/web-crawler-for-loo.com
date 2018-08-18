@@ -112,11 +112,11 @@ def insert2table(dict):
     cursor = conn.cursor()
     j = int(len(dict.keys()))
     for i in range((j-2)//3):
-        string = "'" +dict['vol']+ "',"
-        string = string + " '" + dict['title'] + "',"
-        string = string + " '" + dict['name_'+str(i)] + "',"
-        string = string + " '" + dict['artist_'+str(i)] + "',"
-        string = string + " '" + dict['album_'+str(i)] + "'"
+        string = '"' +dict['vol']+ '",'
+        string = string + ' "' + dict['title'] + '",'
+        string = string + ' "' + dict['name_'+str(i)] + '",'
+        string = string + ' "' + dict['artist_'+str(i)] + '",'
+        string = string + ' "' + dict['album_'+str(i)] + '"'
         sql_insert = " insert into luoo VALUES (" + string + ")"
         print(sql_insert)
         try:
